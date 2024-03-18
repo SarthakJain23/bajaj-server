@@ -13,13 +13,15 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => res.send("<h1>Site is working> here </a></h1>"));
+app.get("/", (req, res) => res.send("<h1>Site is working> here</h1>"));
 
 app.post("/bfhl", (req, res) => {
-  const { data } = req.json();
-  const evenNum = [""];
-  const oddNum = [""];
-  const alp = [""];
+  const body = req.json();
+  const data = body.data;
+  console.log(data);
+  const evenNum = [];
+  const oddNum = [];
+  const alp = [];
   data.forEach((item) => {
     if (typeof data[i] == "number") {
       if (data[i] % 2 == 0) {
