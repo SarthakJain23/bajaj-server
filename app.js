@@ -16,10 +16,10 @@ app.use(
 app.get("/", (req, res) => res.send("<h1>Site is working here</h1>"));
 
 app.post("/bfhl", (req, res) => {
-  const {data} = req.body.data;
+  const { data } = req.body;
   return res.status(200).json({
-    data : data
-  })
+    data: data,
+  });
   // const evenNum = [];
   // const oddNum = [];
   // const alp = [];
@@ -42,7 +42,7 @@ app.post("/bfhl", (req, res) => {
   //   odd_numbers: oddNum,
   //   even_numbers: evenNum,
   //   alphabets: alp,
-  });
+  // });
 });
 
 app.listen(process.env.PORT, () => {
