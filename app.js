@@ -13,11 +13,10 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => res.send("<h1>Site is working> here</h1>"));
+app.get("/", (req, res) => res.send("<h1>Site is working here</h1>"));
 
 app.post("/bfhl", (req, res) => {
-  const body = req.json();
-  const data = body.data;
+  const data = req.body.data;
   console.log(data);
   const evenNum = [];
   const oddNum = [];
