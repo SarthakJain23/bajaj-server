@@ -17,19 +17,19 @@ app.get("/", (req, res) => res.send("<h1>Site is working here</h1>"));
 
 app.post("/bfhl", (req, res) => {
   try {
-    const { data } = req.body;
+    const data = req.body.data;
     const evenNum = [];
     const oddNum = [];
     const alp = [];
     data.forEach((item) => {
-      if (typeof data[i] == "number") {
-        if (data[i] % 2 == 0) {
-          evenNum.push(data[i]);
+      if (typeof item == "number") {
+        if (item % 2 == 0) {
+          evenNum.push(item);
         } else {
-          oddNum.push(data[i]);
+          oddNum.push(item);
         }
       } else {
-        alp.push(data[i]);
+        alp.push(item);
       }
     });
     return res.status(200).json({
