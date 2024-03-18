@@ -16,7 +16,7 @@ app.use(
 app.get("/", (req, res) => res.send("<h1>Site is working here</h1>"));
 
 app.post("/bfhl", (req, res) => {
-  const data = req.body.data;
+  const {data} = req.body.data;
   return res.status(200).json({
     data : data
   })
